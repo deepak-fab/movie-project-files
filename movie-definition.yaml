@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+     name:    movie-app-pod
+     lablels:  
+        name: movie-app-pod       
+        app:  deepak-movie-app
+      
+
+spec:
+    containers:
+    - name : movie-app
+      image : fabmittal/movie
+      ports: 
+        containerPort:8100
+    

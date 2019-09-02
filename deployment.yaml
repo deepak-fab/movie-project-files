@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deepak-movie
+spec:
+  selector:
+    matchLabels:
+      app: deepak-movie
+      tier: backend
+      track: stable
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: deepak-movie
+        tier: backend
+        track: stable
+    spec:
+      containers:
+        - name: deepak-movie
+          image: "asia.gcr.io/peppy-apparatus-251505/deepak-movie"
+          ports:
+            - name: http
+              containerPort: 80

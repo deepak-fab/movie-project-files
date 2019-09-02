@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+     name:    auth-app-pod
+     lablels:  
+        name: auth-app-pod       
+        app:  deepak-movie-app
+      
+
+spec:
+    containers:
+    - name : auth-app
+      image : fabmittal/auth-service
+      ports: 
+        containerPort:80
+    
