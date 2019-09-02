@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+     name:    auth-deployment
+     labels:         
+        app:  deepak-movie-app
+spec:
+      replicas: 2
+      selector:
+        matchlabels:
+            name: auth-app-pod       
+            app:  deepak-movie-app
+        template:
+            metadata:
+             name:    auth-app-pod
+             labels:  
+                name: auth-app-pod       
+                app:  deepak-movie-app
+              
+
+            spec:
+                containers:
+                - name: auth-app
+                  image: fabmittal/auth-service
+                  ports: 
+                   - containerPort: 9100
