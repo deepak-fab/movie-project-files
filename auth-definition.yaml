@@ -10,7 +10,7 @@ metadata:
 spec:
     containers:
     - name : auth-app
-      image : fabmittal/auth-service
+      image :auth-service
       ports: 
         containerPort:80
     

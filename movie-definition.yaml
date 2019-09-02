@@ -10,7 +10,7 @@ metadata:
 spec:
     containers:
     - name : movie-app
-      image : fabmittal/movie
+      image :movie
       ports: 
         containerPort:8100
     
