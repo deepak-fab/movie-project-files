@@ -9,8 +9,8 @@ metadata:
 
 spec:
     containers:
-    - name : auth-app
-      image :auth-service
+    - name: auth-app
+      image:auth-service
       ports: 
         containerPort:80
     
