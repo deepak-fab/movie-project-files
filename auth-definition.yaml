@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
      name:    auth-app-pod
-     lablels:  
+     labels:  
         name: auth-app-pod       
         app:  deepak-movie-app
       
@@ -10,7 +10,7 @@ metadata:
 spec:
     containers:
     - name: auth-app
-      image:auth-service
+      image: auth-service
       ports: 
-        containerPort:80
+       - containerPort: 9100
     

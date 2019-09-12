@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
      name:    auth-service
-     lablels:  
+     labels:  
         name: auth-service       
         app:  deepak-movie-app
       

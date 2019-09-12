@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: movie-app
+spec:
+  selector:
+    matchLabels:
+      app: movie-app
+      tier: backend
+      track: stable
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: movie-app
+        tier: backend
+        track: stable
+    spec:
+      containers:
+        - name: movie-pod
+          image: fabmittal/movie
+          ports:
+            - name: http
+              containerPort: 8100

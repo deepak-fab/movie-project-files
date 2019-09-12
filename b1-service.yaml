@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: booking-app
+spec:
+  type: LoadBalancer  
+  selector:
+    app: booking-app
+    tier: backend
+  ports:
+  - protocol: TCP
+    port: 8200
+    targetPort: 8200
